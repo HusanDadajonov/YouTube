@@ -402,19 +402,15 @@ img {
 
 .menu {
   max-width: 75px;
-  padding: 30px 10px 10px 10px;
+  padding: 20px 0;
   position: relative;
 }
 
 .menu__btn {
   background: none;
   border: none;
-  padding: 0;
+  padding: 16px 10px;
   font-size: 24px;
-}
-
-.menu__btn:not(:last-child) {
-  margin-bottom: 32px;
 }
 
 .menu__small-menu {
@@ -429,7 +425,13 @@ img {
 }
 
 .menu__btn--active {
-  color: #ff0000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.menu__icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 6px;
 }
 
 .header__burger--btn {
@@ -439,6 +441,11 @@ img {
   color: #808080;
   padding: 6px 3px;
   margin-right: 30px;
+}
+
+.header__logo-link {
+  width: 90px;
+  height: 20px;
 }
 
 .header__flex {
@@ -542,12 +549,12 @@ img {
   height: 58px;
   position: relative;
   margin-bottom: 16px;
-  width: 1500px !important;
 }
 
 .link-box__links {
   -webkit-transform: translateX(28px);
           transform: translateX(28px);
+  min-width: 1500px !important;
   position: absolute;
 }
 
@@ -582,7 +589,7 @@ img {
 
 .videos {
   background: rgba(196, 196, 196, 0.12);
-  padding: 28px 80px 28px 20px;
+  padding: 28px 100px 28px 20px;
 }
 
 .videos__col:not(:last-child) {
@@ -592,6 +599,17 @@ img {
 .videos__video--box {
   width: 100%;
   height: 172px;
+  position: relative;
+}
+
+.videos__video--box img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .videos__video {
@@ -668,8 +686,7 @@ img {
 }
 
 .big-menu__btn--active {
-  color: #ff0000;
-  background: #c4c4c4;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .big-menu__btn--active .big-menu__btn--name {
@@ -681,5 +698,9 @@ img {
   line-height: 29px;
   color: #808080;
   margin-left: 30px;
+}
+
+.big-menu .menu__icon {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

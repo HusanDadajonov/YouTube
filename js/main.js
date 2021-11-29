@@ -6,11 +6,13 @@ let elSmallMenu = document.querySelector(".menu__small-menu");
 let elBigMenu = document.querySelector(".big-menu");
 let elContents = document.querySelector(".contents");
 let elVidios = document.querySelector(".videos");
+let elPersonName = document.querySelectorAll(".person__name");
 let sum = 1;
 
 //events
 
 elInp.addEventListener("keyup", showSearchHistory);
+elInp.addEventListener("keyup", filterFunc);
 elForm.addEventListener("submit", formFunc);
 elBurgerBtn.addEventListener("click", showBigMenu)
 
@@ -29,7 +31,7 @@ function formFunc(e){
     let elItem = document.createElement("li");
     elItem.className = "search-history__item";
     elItem.innerHTML = elInp.value;
-    elSearchHistory.append(elItem)
+    elSearchHistory.append(elItem);
     elInp.value = "";
 }
 
@@ -51,3 +53,14 @@ function showBigMenu(e){
     }
     console.log(sum);
 }
+
+function filterFunc(e){
+    let inpText = elInp.value.toLowerCase();
+    elPersonName.forEach(function(item) {
+        console.log(elPersonName.includes(item));  
+    });
+    
+}
+
+console.log(elPersonName);
+

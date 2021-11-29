@@ -16,8 +16,7 @@
     }
 
     &__btn--active {
-        color: #ff0000;
-        background: #c4c4c4;
+        background: rgba(0,0,0,0.05);
     }
 
     &__btn--active &__btn--name{
@@ -30,4 +29,8 @@
         color: $color-primary;
         margin-left: 30px;
     }
+}
+
+.big-menu .menu__icon{
+    margin-bottom: 0;
 }

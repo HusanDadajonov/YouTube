@@ -5,11 +5,10 @@
    height: 58px;
    position: relative;
    margin-bottom: 16px;
-   width: 1500px !important;
-
 
    &__links{
         transform: translateX(28px);
+        min-width: 1500px !important;
         position:absolute;
    }
 

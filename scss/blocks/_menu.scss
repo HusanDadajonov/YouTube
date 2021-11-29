@@ -1,16 +1,12 @@
 .menu {
     max-width: 75px;
-    padding: 30px 10px 10px 10px;
+    padding: 20px 0;
     position: relative;
 
     &__btn {
         @include btn-unstyled;
-        padding: 0;
+        padding: 16px 10px;
         font-size: 24px;
-
-        &:not(:last-child){
-            margin-bottom: 32px;
-        }
     }
 
     &__small-menu{
@@ -23,6 +19,13 @@
     }
 
     &__btn--active{
-        color: #ff0000;;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+
+    &__icon{
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
     }
 }

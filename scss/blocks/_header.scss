@@ -8,6 +8,11 @@
         margin-right: 30px;
     }
 
+    &__logo-link{
+        width: 90px;
+        height: 20px;
+    }
+
     &__flex{
         padding: 14px 55px 10px 19px;
     }
@@ -30,6 +35,7 @@
         width: 80%;
         padding: 5px;
         @include btn-unstyled;
+
         &::placeholder{
             font-weight: 500;
             font-size: 18px;
@@ -41,6 +47,7 @@
             outline: none;
 
         }
+
     }
 
     &__search--btn {
