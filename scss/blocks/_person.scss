@@ -1,0 +1,23 @@
+.person {
+    padding-top: 16px;
+
+    &__name {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    &__acount,
+    &__static{
+        font-size: 12px;
+        line-height: 16px;
+        color: $color-primary;
+    }
+}
+
+.person img{
+    margin-right: 16px;
+    border-radius: 50%;
+}

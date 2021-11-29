@@ -1,0 +1,23 @@
+.search-history {
+    width: 100%;
+    max-height: 100vh;
+    transform: translateY(29.5px);
+    position:absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+    padding: 30px 10px;
+    display: none;
+    box-shadow: 0 0 2px 0;
+
+    &__item {
+        font-size: 18px;
+        line-height: 16px;
+        color: rgba(40, 40, 40, 0.76);
+
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+}

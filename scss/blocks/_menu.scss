@@ -1,0 +1,28 @@
+.menu {
+    max-width: 75px;
+    padding: 30px 10px 10px 10px;
+    position: relative;
+
+    &__btn {
+        @include btn-unstyled;
+        padding: 0;
+        font-size: 24px;
+
+        &:not(:last-child){
+            margin-bottom: 32px;
+        }
+    }
+
+    &__small-menu{
+        display: flex;
+    }
+
+    &__btn--name {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    &__btn--active{
+        color: #ff0000;;
+    }
+}

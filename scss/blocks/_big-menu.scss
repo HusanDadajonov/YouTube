@@ -1,0 +1,33 @@
+.big-menu {
+    position:absolute;
+    top: 25px;
+    left: 0;
+    z-index: 100;
+    width: 241px;
+    height: 100vh;
+    display: none;
+    background: #fff;
+
+    &__btn {
+        @include btn-unstyled;
+        font-size: 24px;
+        color: $color-primary;
+        padding: 8px 0 8px 19px;
+    }
+
+    &__btn--active {
+        color: #ff0000;
+        background: #c4c4c4;
+    }
+
+    &__btn--active &__btn--name{
+        color: #000;
+    }
+
+    &__btn--name {
+        font-size: 18px;
+        line-height: 29px;
+        color: $color-primary;
+        margin-left: 30px;
+    }
+}

@@ -1,0 +1,44 @@
+.link-box {
+   padding: 10px 0;
+   border-top: 1px solid #80808070;
+   border-bottom: 1px solid #80808070;
+   height: 58px;
+   position: relative;
+   margin-bottom: 16px;
+   width: 1500px !important;
+
+
+   &__links{
+        transform: translateX(28px);
+        position:absolute;
+   }
+
+    &__btn {
+        text-decoration: none;
+        background: rgba(196, 196, 196, 0.4);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        border-radius: 16.5px;
+        color: $title-color;
+        padding: 6px 19px;
+        font-size: 14px;
+        line-height: 16px;
+        transition: color 0.4s ease, background 0.4s ease;
+
+        &:not(:last-child){
+            margin-right: 27px;
+        }
+
+        &:hover{
+            color: #fff;
+            background: $title-color;
+        }
+
+
+    }
+
+    &__btn--active{
+        color: #fff;
+        background: $title-color;
+    }
+}
