@@ -1,4 +1,5 @@
 .header {
+    position: relative;
 
     &__burger--btn {
         @include btn-unstyled;
@@ -18,13 +19,26 @@
     }
     
 
-    &__form{
+    
+    &__form-block{
         width: 688px;
         background: #fff;
         border: 1px solid #c4c4c4;
         border-radius: 2px;
         position: relative;
         margin-right: 8px;
+    }
+
+    &__form-close{
+        @include btn-unstyled;
+        display: none;
+    }
+
+    &__form-close svg{
+        width: 30px !important;
+        height: 30px !important;
+        padding: 0;
+        margin-right: 10px;
     }
 
     &__label {
@@ -64,10 +78,30 @@
         font-size: 18px;
     }
 
+    &__search-show--btn{
+        display: none;
+        @include btn-unstyled;
+        padding: 0;
+        margin-right: 7px;
+    }
+    
+    &__search-show--btn svg{
+        width: 40px !important;
+        height: 28px !important;
+        fill: $color-primary;
+    }
+
+
+    &__btns-box{
+        flex: 0.9;
+        justify-content:space-between
+    } 
+
     &__voice--btn {
         @include btn-unstyled;
         color: $color-primary;
-        font-size: 24px
+        font-size: 24px;
+        padding: 0
     }
 
     &__btn {
@@ -79,5 +113,88 @@
         &:not(:last-child){
             margin-right: 24px;
         }
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .header__form{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .header__form{
+        width: 300px;
+    }
+}
+
+
+@media screen and (max-width:823px) {
+    .header__btns-fixed{
+        justify-content: space-between;
+        padding: 10px 25px;
+        width: 100%;
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        background:#fff;
+        z-index: 300;
+        box-shadow: 0 29px 30px 2px #000;
+    }
+
+   
+
+    .header__btn:not(:last-child){
+        margin-right: 0;
+    }
+
+    
+
+    .header__form{
+        width: 350px;
+    }
+    
+
+    .header__btns-box{
+        justify-content: flex-end;
+    }
+
+    .header__flex{
+        padding-right: 20px;
+    }
+}
+
+
+@media screen and (max-width:634px) {
+    .header__form{
+        width: 290px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .header__form{
+        position:absolute;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        width: 97%;
+        left: 50%;
+        background: #fff;
+        transform: translateX(-50%);
+    }
+    .header__form-close{
+        display: flex;
+    }
+
+    .header__search-show--btn{
+        display: flex;
+    }
+
+    .header__search--inp{
+        padding: 12px;
+    }
+
+    .search-history {
+        transform: translateY(42.5px) !important;
     }
 }

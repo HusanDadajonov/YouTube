@@ -7,6 +7,8 @@ let elBigMenu = document.querySelector(".big-menu");
 let elContents = document.querySelector(".contents");
 let elVidios = document.querySelector(".videos");
 let elPersonName = document.querySelectorAll(".person__name");
+let elHeaderSearchBtn = document.querySelector(".header__search-show--btn");
+let elFormClose = document.querySelector(".header__form-close");
 let sum = 1;
 
 //events
@@ -14,7 +16,9 @@ let sum = 1;
 elInp.addEventListener("keyup", showSearchHistory);
 elInp.addEventListener("keyup", filterFunc);
 elForm.addEventListener("submit", formFunc);
-elBurgerBtn.addEventListener("click", showBigMenu)
+elBurgerBtn.addEventListener("click", showBigMenu);
+elHeaderSearchBtn.addEventListener("click", showInp);
+elFormClose.addEventListener("click", hideInp);
 
 //functions
 function showSearchHistory(e) {
@@ -39,15 +43,13 @@ function showBigMenu(e){
     if(sum){
         elSmallMenu.style.display = "none";
         elBigMenu.style.display = "flex";
-        elContents.style.paddingLeft = "225px";
-        elVidios.style.paddingRight = "40px";
+        elContents.style.paddingLeft = "240px";
         sum = 0;
     }
     else{
         elSmallMenu.style.display = "flex";
         elBigMenu.style.display = "none";
-        elContents.style.paddingLeft = "0";
-        elVidios.style.paddingRight = "80px";
+        elContents.style.paddingLeft = "30px";
         console.log("awd");
         sum = 1;
     }
@@ -55,12 +57,29 @@ function showBigMenu(e){
 }
 
 function filterFunc(e){
-    let inpText = elInp.value.toLowerCase();
-    elPersonName.forEach(function(item) {
-        console.log(elPersonName.includes(item));  
-    });
-    
+    let inpText = e.target.value.toLowerCase();
+
+    Array.from(elPersonName).forEach(function (item){
+        let itemText = item.textContent;
+        if(itemText.toLowerCase().includes(inpText) != 1){
+            console.log(itemText);
+            item.parentElement.parentElement.parentElement.style.display = "none";
+        }
+        else{
+            item.parentElement.parentElement.parentElement.style.display = "block";
+        }
+    })
 }
 
-console.log(elPersonName);
+function showInp(e){
+    elForm.style.opacity = "1";
+    elForm.style.zIndex = "100";
+    elForm.style.visibility = "visible";
+}
+
+function hideInp(e){
+    elForm.style.opacity = "0";
+    elForm.style.zIndex = "-1";
+    elForm.style.visibility = "hidden";
+}
 

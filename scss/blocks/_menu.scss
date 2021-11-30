@@ -29,3 +29,15 @@
         margin-bottom: 6px;
     }
 }
+
+@media screen and (max-width:576px){
+    .menu__small-menu{
+        display: none !important;
+    }
+    .contents{
+        padding-left: 0 !important;
+    }
+    .big-menu{
+        top: 0 !important;
+    }
+}

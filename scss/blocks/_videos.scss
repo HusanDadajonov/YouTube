@@ -1,11 +1,16 @@
 .videos {
     background: rgba(196, 196, 196, 0.12);
-    padding: 28px 100px 28px 20px;
+    padding: 28px 28px 28px 28px;
 
     &__col {
         &:not(:last-child){
             margin-bottom: 50px;
         }
+    }
+
+    &__row{
+        position:relative;
+        z-index: -1;
     }
 
     &__video--box{
@@ -26,5 +31,12 @@
     &__video {
         width: 100%;
         height: 100%;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .videos__video--box{
+        height: 300px;
     }
 }

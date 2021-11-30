@@ -1,3 +1,9 @@
 .contents {
     width: 100%;
 }
+
+@media screen and (max-width:823px){
+    .contents{
+        padding-bottom: 40px;
+    }
+}
